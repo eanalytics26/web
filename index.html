@@ -7,34 +7,34 @@
     <title>E.Analytics</title>
     <link rel="icon" type="image/svg+xml" href="https://avatars.githubusercontent.com/u/233206468?s=200" />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html, body {
-            width: 100%;
-            height: 100%;
-            overflow-x: hidden;
-            overflow-y: auto;
+        body {
             background-color: #0C1014;
         }
 
-        iframe {
-            width: 100vw;
-            min-height: 100vh;
+        .iframe-wrapper {
+            position: relative;
+            width: 100%;
+            /* Define a altura descontando os ~36px da barra inferior */
+            height: calc(100vh - 36px);
+            overflow: hidden;
+        }
+
+        .iframe-wrapper iframe {
+            width: 100%;
+            /* O iframe fica um pouco maior para a barra ficar "para fora" da área visível */
+            height: calc(100% + 36px);
             border: none;
-            display: block;
         }
     </style>
 </head>
 
 <body>
-    <iframe title="eanalytics2026"
-        src="https://app.powerbi.com/reportEmbed?reportId=4a934315-8383-495a-bf63-e7db6e358b0f&autoAuth=true&ctid=dd6f49cd-76bf-4b32-8208-a6fc02aad09e&filterPaneEnabled=false&navContentPaneEnabled=false&pageView=fitToWidth"
-        allowFullScreen="true">
-    </iframe>
+    <div class="iframe-wrapper">
+        <iframe title="eanalytics2026"
+            src="https://app.powerbi.com/view?r=eyJrIjoiZDAyYTEyN2QtZjUyOC00MjA4LWE2MDMtYzc3NTY3ZGM2YzNiIiwidCI6ImQ4ZTNmYTEzLTlkZGItNGNjNS04YTJhLWY1NjQ5OWYxNGUyNSJ9"
+            allowFullScreen="true">
+        </iframe>
+    </div>
 </body>
 
 </html>
