@@ -13,15 +13,17 @@
 
         .iframe-wrapper {
             position: relative;
-            width: 1024px;
+            width: 100%;
             margin: 0 auto;
-            height: calc(100vh - 16px);
+            /* Define a altura descontando os ~36px da barra inferior */
+            height: calc(100vh - 20px);
             overflow: hidden;
         }
 
         .iframe-wrapper iframe {
             width: 100%;
-            height: calc(100vh + 16px);
+            /* O iframe fica um pouco maior para a barra ficar "para fora" da área visível */
+            height: calc(100% + 36px);
             border: none;
         }
     </style>
