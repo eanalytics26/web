@@ -5,25 +5,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>E.Analytics</title>
-    <link rel="icon" type="image/svg+xml" href="https://avatars.githubusercontent.com/u/331695127?s=200" />
+    <link rel="icon" type="image/svg+xml" href="https://avatars.githubusercontent.com/u/331695127" />
     <style>
         body {
+            margin: 0;
             background-color: #0C1014;
+            display: flex;
+            justify-content: center;
         }
 
         .iframe-wrapper {
-            position: relative;
             width: 100%;
-            margin: 0 auto;
-            /* Define a altura descontando os ~36px da barra inferior */
-            height: calc(100vh - 20px);
+            max-width: 1240px;
+            height: 100vh;
             overflow: hidden;
         }
 
         .iframe-wrapper iframe {
             width: 100%;
-            /* O iframe fica um pouco maior para a barra ficar "para fora" da área visível */
-            height: calc(100% + 36px);
+            height: calc(100vh + 36px);
             border: none;
         }
     </style>
@@ -33,7 +33,7 @@
     <div class="iframe-wrapper">
         <iframe title="eanalytics2026"
             src="https://app.powerbi.com/view?r=eyJrIjoiMGNiNGI5ZWItNzBkYS00NmUwLWEzNmQtZmZmZjRiMDE0OGNhIiwidCI6ImQ4ZTNmYTEzLTlkZGItNGNjNS04YTJhLWY1NjQ5OWYxNGUyNSJ9"
-            allowFullScreen="true">
+            scrolling="no">
         </iframe>
     </div>
 </body>
